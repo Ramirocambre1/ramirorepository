@@ -1,0 +1,42 @@
+for(Map.Entry<Key,Value> entry:"Nombre del hashmap".entrySet())
+{
+}
+
+public boolean eliminarElemento(Integer numero )
+	{
+		boolean flag = false;
+		Elemento el;
+		
+		for(Map.Entry<Integer,Elemento> entry:elementos.entrySet())
+		{
+			el=(Elemento)entry.getValue();
+			
+			if(entry.getKey()==numero && el.isEntregado() )
+			{
+				elementos.remove(numero);
+				flag=true;
+			}
+			else
+			{
+				flag=false;
+			}
+			
+		}
+		
+		return flag;
+	}
+	
+	public void listar()
+	{
+		Elemento el;
+		
+		for(Map.Entry<Integer, Elemento> entry:elementos.entrySet())
+		{
+			el=(Elemento)entry.getValue();
+			
+			System.out.println(el.toString());
+			
+		}
+		
+	}
+
