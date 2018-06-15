@@ -1,0 +1,13 @@
+Creo el objeto en una funcion afuera del MAIN!!!!!!!!!!
+
+
+static void agregarjson()throws JSONException
+	{
+		Juegos juego1=new Juegos("Bioshock","2kgames",10);
+		JSONObject jsonobject=new JSONObject();
+		jsonobject.put("Juego1", juego1);
+		
+		System.out.println(jsonobject);
+		
+		
+	}
